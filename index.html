@@ -17,8 +17,9 @@
     <!-- Nav -->
     <nav>
         <div class="nav-wrapper red">
-            <a href="#" class="brand-logo">ABHI</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="#!" class="brand-logo">ABHI</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
                 <li><a href="index.html" title="Home">Home</a></li>
                 <li><a href="about.html" title="About">About</a></li>
                 <li><a href="./images/abhi_resume.pdf" title="Resume">Resume</a></li>
@@ -26,31 +27,34 @@
             </ul>
         </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html" title="Home">Home</a></li>
+        <li><a href="about.html" title="About">About</a></li>
+        <li><a href="./images/abhi_resume.pdf" title="Resume">Resume</a></li>
+        <li><a href="contact.html" title="Contact">Contact</a></li>
+    </ul>
     <!-- End of Nav -->
 
+
+
     <div class="bg">
-        <div class="bg_text">
-            <h1>I am ABHISHEK</h1>
-            <p>And I'm a Photographer and Web Designer</p>
-            <a class="waves-effect waves-light btn-large" href="./images/abhi_resume.pdf"><i
-                    class="large material-icons">file_download</i>Download Resume</a>
+        <div class="col s12 l6">
+            <div class="bg_text">
+                <h1>I am ABHISHEK</h1>
+                <p>And I'm a Photographer and Web Designer</p>
+                <a class="waves-effect waves-light btn-large" href="./images/abhi_resume.pdf"><i
+                        class="large material-icons">file_download</i>Download Resume</a>
+            </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
 
 
     <!-- Footer -->
     <footer class="page-footer red">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
+                <div class="col s12 l6">
                     <h5 class="white-text">QUICK LINKS</h5>
                     <ul id="nav-mobile" class="left hide-on-med-and-down">
                         <li><a href="index.html">Home</a></li>
@@ -87,11 +91,16 @@
     </footer>
     <!-- End of Footer -->
 
-
-
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {});
+        });
+    </script>
 </body>
 
 </html>

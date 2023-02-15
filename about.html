@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhishek Portfolio | About</title>
+    <title>Abhishek Portfolio</title>
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -17,8 +17,9 @@
     <!-- Nav -->
     <nav>
         <div class="nav-wrapper red">
-            <a href="#" class="brand-logo">ABHI</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="#!" class="brand-logo">ABHI</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
                 <li><a href="index.html" title="Home">Home</a></li>
                 <li><a href="about.html" title="About">About</a></li>
                 <li><a href="./images/abhi_resume.pdf" title="Resume">Resume</a></li>
@@ -26,19 +27,27 @@
             </ul>
         </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html" title="Home">Home</a></li>
+        <li><a href="about.html" title="About">About</a></li>
+        <li><a href="./images/abhi_resume.pdf" title="Resume">Resume</a></li>
+        <li><a href="contact.html" title="Contact">Contact</a></li>
+    </ul>
     <!-- End of Nav -->
 
 
     <div class="about">
+        <div class="col s12 l6">
 
-        <h1 id="borderimg">ABOUT</h1>
-        <p class="about_txt">
-            Hello I’m Abhishek!<br> I can help you to build a product,
-            feature or website Look through some of my work and experience!<br> If
-            you like what you see and have a project you need coded, don’t
-            hestiate to contact me.
-        </p>
-
+            <h1 id="borderimg">ABOUT</h1>
+            <p class="about_txt">
+                Hello I’m Abhishek!<br> I can help you to build a product,
+                feature or website Look through some of my work and experience!<br> If
+                you like what you see and have a project you need coded, don’t
+                hestiate to contact me.
+            </p>
+        </div>
 
 
 
@@ -86,16 +95,16 @@
 
 
 
+        <div class="col s12 l6">
+            <hr>
+            <b>
+                <h3 class="center"><b>My YouTube Channel</b></h3>
+            </b>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/DtfdB55s6E4">
+            </iframe>
+        </div>
 
         <hr>
-        <b>
-            <h3 class="center"><b>My YouTube Channel</b></h3>
-        </b>
-        <iframe width="420" height="345" src="https://www.youtube.com/embed/DtfdB55s6E4">
-        </iframe>
-
-        <hr>
-
     </div>
 
 
@@ -105,13 +114,13 @@
     <footer class="page-footer red">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
+                <div class="col s12 l6">
                     <h5 class="white-text">QUICK LINKS</h5>
                     <ul id="nav-mobile" class="left hide-on-med-and-down">
-                        <li><a href="index.html" title="Home">Home</a></li>
-                        <li><a href="about.html" title="About">About</a></li>
-                        <li><a href="./images/abhi_resume.pdf" title="Resume">Resume</a></li>
-                        <li><a href="contact.html" title="Contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="./images/abhi_resume.pdf">Resume</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col l4 offset-l2 s12">
@@ -142,11 +151,16 @@
     </footer>
     <!-- End of Footer -->
 
-
-
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {});
+        });
+    </script>
 </body>
 
 </html>

@@ -5,22 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhishek Portfolio | Contact</title>
+    <title>Abhishek Portfolio</title>
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="resume.css">
-    <link rel="stylesheet" href="about.html">
-    <link rel="stylesheet" href="contact.html">
 </head>
 
 <body>
     <!-- Nav -->
     <nav>
         <div class="nav-wrapper red">
-            <a href="#" class="brand-logo">ABHI</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="#!" class="brand-logo">ABHI</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
                 <li><a href="index.html" title="Home">Home</a></li>
                 <li><a href="about.html" title="About">About</a></li>
                 <li><a href="./images/abhi_resume.pdf" title="Resume">Resume</a></li>
@@ -28,6 +27,13 @@
             </ul>
         </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html" title="Home">Home</a></li>
+        <li><a href="about.html" title="About">About</a></li>
+        <li><a href="./images/abhi_resume.pdf" title="Resume">Resume</a></li>
+        <li><a href="contact.html" title="Contact">Contact</a></li>
+    </ul>
     <!-- End of Nav -->
 
     <div class="contact">
@@ -64,15 +70,11 @@
 
 
 
-
-
-
-
     <!-- Footer -->
     <footer class="page-footer red">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
+                <div class="col s12 l6">
                     <h5 class="white-text">QUICK LINKS</h5>
                     <ul id="nav-mobile" class="left hide-on-med-and-down">
                         <li><a href="index.html">Home</a></li>
@@ -83,7 +85,6 @@
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">SOCIALS</h5>
-
                     <a href="https://www.facebook.com/profile.php?id=100070896248008&mibextid=ZbWKwL"
                         target="_blank"><img src="./images/facebook_logo.png" alt="Facebook"></a>
 
@@ -106,11 +107,16 @@
     </footer>
     <!-- End of Footer -->
 
-
-
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {});
+        });
+    </script>
 </body>
 
 </html>
